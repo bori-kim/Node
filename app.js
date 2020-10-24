@@ -22,6 +22,15 @@ app.use('/uploads', express.static('uploads')); //정적 파일 업로드
 //폴더안에 있는 파일들을 한번에 사용하기(img, js, css 등)
 //앞이 url, 뒤가 폴더명
 
+app.use((req, res, next) => {
+    app.locals.isLogin = true;
+    next();
+});
+   
+
+
+
+
 app.get('/', (req,res) => {
     res.send('express start');
 });
