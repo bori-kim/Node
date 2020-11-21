@@ -20,6 +20,10 @@ router.get('/products',(req, res) =>{
     );
 }); //localhost:3000/admin/products
 
+router.get('/test', (req, res) => {
+    res.render('admin/test.html')
+})
+
 router.get('/products/write', (req,res)=>{
     res.render('admin/write.html');
 }); //localhost:3000/admin/products/write

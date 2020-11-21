@@ -24,9 +24,12 @@ app.use('/uploads', express.static('uploads')); //정적 파일 업로드
 
 app.use((req, res, next) => {
     app.locals.isLogin = true;
+    app.locals.req_path = req.path; // 현재 url을 보내줌
     next();
 });//isLogin이라는 전역변수를 생성
    
+//외부 js파일을 /script라는 이름으로 사용하기
+app.use('/script', express.static("resources/js"));
 
 
 
