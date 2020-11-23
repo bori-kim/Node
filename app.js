@@ -28,8 +28,6 @@ app.use((req, res, next) => {
     next();
 });//isLogin이라는 전역변수를 생성
    
-//외부 js파일을 /script라는 이름으로 사용하기
-app.use('/script', express.static("resources/js"));
 
 
 
